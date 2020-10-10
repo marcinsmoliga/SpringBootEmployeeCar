@@ -35,24 +35,17 @@ public class Employee {
     private String city;
 
     @EqualsAndHashCode.Exclude
-    @Min(value = 18)
-    @Max(value = 80)
-    private double age;
+    @NotEmpty
+    private String pesel;
 
     @EqualsAndHashCode.Exclude
     @NotNull
-    @Min(value = 1800)
     private double salary;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @EqualsAndHashCode.Exclude
     @NotNull
     private LocalDate startJobDate;
-
-    @EqualsAndHashCode.Exclude
-    @Min(0)
-    @Max(5)
-    private int benefit;
 
     @EqualsAndHashCode.Exclude
     @Email
